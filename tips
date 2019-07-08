@@ -1,0 +1,90 @@
+lstitem.findElement(By.xpath("html/body/div[17]/div/div/div/div/div[1]/div/div/ul/li[16]/a/span/span")).click();
+use the below line and it should work.
+
+driver.findElement(By.partialLinkText("Log Out")).click();
+clear_button = driver.find_element_by_xpath("//input[@name='continue'][@type='button']")
+clear_button = driver.find_element_by_xpath("//form[@id='loginForm']/input[4]")
+
+
+
+
+https://www.nunoserrano.com/2016/09/23/selenium-css-lifesavers/
+
+
+-----------------
+You can easily get this task accomplished with CSS.
+
+The formula is:
+
+element[attribute='attribute-value']
+So if you have,
+
+<a href="mysite.com"></a>
+You can find it using:
+
+By.cssSelector("a[href='mysite.com']");
+this works using any attribute possible.
+
+This page here gives good information on how to formulate effective css selectors, and matching their attributes: http://ddavison.io/css/2014/02/18/effective-css-selectors.html
+----------------------------------
+
+select css
+http://ddavison.io/css/2014/02/18/effective-css-selectors.html
+
+
+
+https://developer.mozilla.org/en-US/docs/Web/CSS/Attribute_selectors
+/* <a> elements with a title attribute */
+a[title] {
+  color: purple;
+}
+
+/* <a> elements with an href matching "https://example.org" */
+a[href="https://example.org"] {
+  color: green;
+}
+
+/* <a> elements with an href containing "example" */
+a[href*="example"] {
+  font-size: 2em;
+}
+
+/* <a> elements with an href ending ".org" */
+a[href$=".org"] {
+  font-style: italic;
+}
+
+
+================================================
+
+
+xpath
+https://docs.microsoft.com/en-us/previous-versions/dotnet/netframework-4.0/ms256086(v=vs.100)
+
+<input id="" type="checkbox" value="/p1/foobar1" name="checkbox1" partition="p1" onclick=""/>
+<input id="" type="checkbox" value="/p1/foobar" name="checkbox2" partition="p1" onclick=""/>
+<input id="" type="checkbox" value="/p2/foobar2" name="checkbox3" partition="p2" onclick=""/>
+//input[@value='/p1/foobar']
+If you don't know what it starts with, you have to resort to functions:
+
+//input[contains(@value, 'foobar') and substring-after(@value, 'foobar') = '']
+
+
+
+
+================================================
+
+
+
+
+
+Assert.assertTrue(
+                driver.findElement(By.id("welcome")).isDisplayed());
+
+
+
+======
+https://www.guru99.com/handling-cookies-selenium-webdriver.html
+
+
+
